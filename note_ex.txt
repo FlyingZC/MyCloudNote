@@ -1,0 +1,15 @@
+1.在测试SqlSessionFactoryBean时
+该bean返回的为SqlSessionFactory
+
+2.mybatis invalid bound statement(not found)
+Mapper接口和xml文件定义对应不上
+
+3.No mapping found for HTTP request with URI [/MyCloudNote/log_in.html] in DispatcherServlet with name 'mvc'
+可能原因
+(1)由于web.xml中配置的<url-pattern>/*</url-pattern>拦截了所有请求,而普通html页面没有对应的处理方法,404
+(2)可能配置类扫描时没把@Controller组件扫描进去
+
+4.org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'noteBookService' is defined
+bean没有配置
+(1)没扫描包
+(2)名称不对@Service("noteBookService")	
